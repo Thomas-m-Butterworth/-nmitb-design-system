@@ -1,22 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "es5",
     "module": "ESNext",
     "lib": ["es2015", "dom"],
     "declaration": true,
     "declarationDir": "dist",
     "outDir": "dist",
     "strict": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "types": ["react", "react-dom"],
     "typeRoots": ["./node_modules/@types"],
-    "baseUrl": "./src",
-    "paths": {
-      "*": ["*"]
-    }
+    "baseUrl": "./src"
   },
   "include": ["src"],
   "exclude": [

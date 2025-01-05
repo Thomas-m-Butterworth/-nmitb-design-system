@@ -1,12 +1,15 @@
-import React, { createContext, useContext } from "react";
-import { theme, ThemeType, ThemeProviderProps } from "./";
+import React, { useContext } from "react";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import { ThemeType } from "./types";
 
-const ThemeContext = createContext<ThemeType>(theme);
+export interface ThemeProviderProps {
+  theme: ThemeType;
+  children: React.ReactNode;
+}
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  return (
-    <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
-  );
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({
+  theme,
+  children,
+}) => {
+  return <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>;
 };
-
-export const useTheme = () => useContext(ThemeContext);
