@@ -1,5 +1,8 @@
-import React, { useContext } from "react";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import React from "react";
+import {
+  ThemeProvider as StyledThemeProvider,
+  DefaultTheme,
+} from "styled-components";
 import { ThemeType } from "./types";
 
 export interface ThemeProviderProps {
@@ -11,5 +14,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   theme,
   children,
 }) => {
-  return <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>;
+  return (
+    <StyledThemeProvider theme={theme as DefaultTheme}>
+      {children}
+    </StyledThemeProvider>
+  );
 };
