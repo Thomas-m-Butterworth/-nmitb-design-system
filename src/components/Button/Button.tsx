@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonContainer } from "./Button.styles";
 
-export const Button = (text: string) => {
-  return <ButtonContainer>{text}</ButtonContainer>;
+export const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
+  return <ButtonContainer onClick={onClick}>{children}</ButtonContainer>;
 };
