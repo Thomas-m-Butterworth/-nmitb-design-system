@@ -12,7 +12,11 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "types": ["react", "react-dom"],
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["*"]
+    }
   },
   "include": ["src"],
   "exclude": [
