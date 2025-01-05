@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/thomas-m-butterworth"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Design system to unify (No) Money in the Bank projects",
   "scripts": {
     "build:tsc": "tsc --emitDeclarationOnly --outDir dist/types",
@@ -57,7 +57,6 @@
     ".": {
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
-    },
-    "./types": "./dist/index.d.ts"
+    }
   }
 }
