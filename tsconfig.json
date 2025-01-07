@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "types": ["react", "react-dom", "node", "@storybook/react"],
     "typeRoots": ["./node_modules/@types"],
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "paths": {
+      "@fonts/*": ["src/assets/fonts/*"]
+    }
   },
   "include": ["src"],
   "exclude": [

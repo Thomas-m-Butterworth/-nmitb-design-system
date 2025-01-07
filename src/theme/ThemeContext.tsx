@@ -4,6 +4,7 @@ import {
   DefaultTheme,
 } from "styled-components";
 import { ThemeType } from "./types";
+import { GlobalStyles } from "./GlobalStyles";
 
 export interface ThemeProviderProps {
   theme: ThemeType;
@@ -16,6 +17,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
 }) => {
   return (
     <StyledThemeProvider theme={theme as DefaultTheme}>
+      <GlobalStyles />
       {children}
     </StyledThemeProvider>
   );
