@@ -16,6 +16,13 @@
     "typeRoots": ["./node_modules/@types"],
     "baseUrl": "./src"
   },
-  "include": ["src", ".storybook/**/*", "**/*.stories.tsx"],
-  "exclude": ["dist", "node_modules", "**/*.test.tsx", "**/*.test.ts"]
+  "include": ["src"],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    ".storybook/**/*",
+    "**/*.stories.tsx"
+  ]
 }
