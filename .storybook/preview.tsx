@@ -1,6 +1,7 @@
 import React from "react";
 import { Preview } from "@storybook/react";
 import { ThemeProvider, theme } from "../src/theme";
+import "../src/styles/fonts.css";
 
 const preview: Preview = {
   parameters: {
